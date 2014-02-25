@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="firetube">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-controller="Firetube">
+<div class="container">
+    <div class="panel">
+        <div ng-repeat="comment in comments">
+            <span><b>{{comment.from}} : </b> <br/> {{comment.body}}</span>
+        </div>
+        <br>
+        <br>
+   <span class="col-lg-12">
+        <span class="col-lg-6">
+                 <span class="col-lg-6">Username :</span>
+                 <span class="col-lg-6"><input ng-model="username" class="form-control" type="text"></span>
+        </span>
+   </span>
+
+          <span class="col-lg-12">
+        <span class="col-lg-6">
+                           <span class="col-lg-6">
+                                            Comment :
+                           </span>
+            <span class="col-lg-6">
+                <textarea class="form-control" ng-model="newComment" ng-keydown="addComment($event)"></textarea>
+            </span>
+            </span>
+              </span>
+
+
+    </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- angular and firebase -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.6/firebase.js'></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
+<script src="js/firetube.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
