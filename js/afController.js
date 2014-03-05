@@ -1,4 +1,4 @@
-angular.module("firetube",["firebase"]).controller("Firetube",["$scope","$firebase",function($scope,$firebase){
+angular.module("App",["firebase"]).controller("afController",["$scope","$firebase",function($scope,$firebase){
 
     var ref = new Firebase("brilliant-fire-7621.firebaseio.com")
 
