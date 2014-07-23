@@ -1,6 +1,6 @@
 angular.module("App",["firebase"]).controller("afController",["$scope","$firebase",function($scope,$firebase){
 
-    var ref = new Firebase("brilliant-fire-7621.firebaseio.com")
+    var ref = new Firebase("database here")
 
     $scope.comments = $firebase(ref);
     //$scope.username = 'Guest' + Math.floor(Math.random() * 101);
